@@ -9,30 +9,64 @@ Instructions to set up:
 
 Make sure you have access to huggingface models relevant for this project. The models can be found below:
 
+pip install transformers accelerate
+huggingface-cli login
+
+Models used:
+
 https://huggingface.co/mistralai/Mistral-7B-v0.1
-
-https://huggingface.co/Qwen/Qwen2.5-14B/blob/main/README.md
-
+https://huggingface.co/Qwen/Qwen2.5-14B
 https://huggingface.co/google/gemma-7b
-
 https://huggingface.co/meta-llama/Llama-2-7b
-
 https://huggingface.co/meta-llama/Llama-2-13b
+https://huggingface.co/meta-llama/Meta-Llama-3-8B
 
-https://huggingface.co/meta-llama/Meta-Llama-3-8B.
+⚠️ Note: Llama and Gemma models may require access approval.
 
-2. **Open the ipynb file on google colab**
-Download the file named ___ and run it on colab preferably or vscode.
-Simply follow the instructions for each cell and run. It is beneficial to have the A100 GPU wiwth high RAM or h100 for computational speed and bandwith.
+2. **Run the Notebook**
+
+Open the notebook in Google Colab:
+
+finalllm (2).ipynb
+
+Then:
+
+Run cells in order
+Follow any instructions in the notebook
+Ensure GPU runtime is enabled
+
+Recommended:
+
+A100 or H100 GPU
+High RAM runtime
+
+***What the Notebook Does***
+Loads LLM models
+
+Generates passphrases under different: temperature, top-p, prompt types (base, topic, entropy)
+
+Stores outputs as JSON
+
+****Computes:****
+entropy metrics
+filtering criteria
+Runs LLM-as-judge evaluation
+
+****Notes****
+Generation is computationally expensive
+Results may vary slightly due to randomness
+Make sure output directories are correctly set
+Output
+
+****Results are saved as:****
+
+JSON files (raw generations)
+CSV files (aggregated metrics)
 
 
+## Contributors
 
-The github files and repo for the code we use in the background is found here (This project is open-source under the MIT License): 
-https://github.com/JieSLi/LLM-passphrase/tree/master
-
-
-
-
+Part of CAI class reproducibility project.
 
 
 
