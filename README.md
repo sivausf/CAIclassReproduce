@@ -1,43 +1,43 @@
-# LLM-passphrase
+# CAIclassLLMReproduce
+Part of our reproducibility paper for LLM generated passcodes
 
-This repository provides code for generating passphrases and examples using large language models (LLMs). 
+You may use the ipynb notebook file linked in this repository to run all of the code and inference for the experiments. 
 
-## Setup
+Instructions to set up: 
 
-1. **Download Hugging Face Models**
+1. **Get access to Hugging Face Models**
 
-   You will need to download the appropriate Hugging Face models before running the code. Please follow the model provider’s instructions for downloading and saving the models locally.
+Make sure you have access to huggingface models relevant for this project. The models can be found below:
 
-2. **Set the `HF_HOME` Environment Variable**
+https://huggingface.co/mistralai/Mistral-7B-v0.1
 
-   After downloading, set the `HF_HOME` environment variable to the directory where your Hugging Face models are stored. For example:
+https://huggingface.co/Qwen/Qwen2.5-14B/blob/main/README.md
 
-   ```bash
-   export HF_HOME=/path/to/your/huggingface/models
-   ```
+https://huggingface.co/google/gemma-7b
 
-   You may want to add this line to your `.bashrc` or `.zshrc` to set it automatically in future sessions.
+https://huggingface.co/meta-llama/Llama-2-7b
 
-## Running the Examples
+https://huggingface.co/meta-llama/Llama-2-13b
 
-To run the econ examples using the Gemma-7B model, use the following command:
+https://huggingface.co/meta-llama/Meta-Llama-3-8B.
 
-```bash
-python main_sample.py --model "gemma-7b" --out_subdir "econ_exs" --bsz 4 --N 32 --in_prompt 806 
-```
+2. **Open the ipynb file on google colab**
+Download the file named ___ and run it on colab preferably or vscode.
+Simply follow the instructions for each cell and run. It is beneficial to have the A100 GPU wiwth high RAM or h100 for computational speed and bandwith.
 
-Here:
 
-- `--model` specifies the model to use.
-- `--out_subdir` sets the output directory for generated examples.
-- `--bsz` defines the batch size.
-- `--N` sets the number of generations.
-- `--in_prompt` provides the prompt ID. 
 
-## Folder Structure
+The github files and repo for the code we use in the background is found here (This project is open-source under the MIT License): 
+https://github.com/JieSLi/LLM-passphrase/tree/master
 
-- `pp/` — Source code for passphrase generation.
-- `main_sample.py` — Main script to run sample generations.
+
+
+
+
+
+
+
+
 
 ## License
 
